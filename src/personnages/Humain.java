@@ -39,12 +39,12 @@ public class Humain {
 		
 	}
 	
-	public int gagnerArgent(int gain) {
+	protected int gagnerArgent(int gain) {
 		argent +=gain;
 		return argent;
 	}
 	
-	public void perdreArgent(int perte) {
+	protected void perdreArgent(int perte) {
 		argent -= perte;
 	}	
 }
