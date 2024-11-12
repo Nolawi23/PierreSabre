@@ -29,14 +29,13 @@ public class Humain {
 	}
 	
 	public void acheter(String bien,int prix) {
-		if (prix <= argent) 
+		if (prix <= argent) { 
 			parler("J'ai " + argent + " sous en poche. Je vais pouvoir m'offrir " + bien + " à " + prix + " sous" );
-		
-		else {
 			perdreArgent(prix);
-			parler("Je n'ai plus que " + argent + " sous en poche. Je ne peut m�me pas m'offrir " + bien + " à " + prix + " sous" );
-		}
+			}
 		
+		else 
+			parler("Je n'ai plus que " + argent + " sous en poche. Je ne peut meme pas m'offrir " + bien + " à " + prix + " sous" );
 	}
 	
 	protected int gagnerArgent(int gain) {
