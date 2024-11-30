@@ -1,6 +1,7 @@
 package histoire;
 
 import personnages.Commercant;
+import personnages.GrandMere;
 import personnages.Ronin;
 import personnages.Samourai;
 import personnages.Traitre;
@@ -20,7 +21,7 @@ public class HistoireTP5 {
 		marco.listerConnaissance();
 		roro.listerConnaissance();
 		yaku.listerConnaissance();
-		
+
 		System.out.println(
 				"-----------------------------------------------------------------------------------------------------------");
 
@@ -28,10 +29,10 @@ public class HistoireTP5 {
 		akimoto.faireConnaissanceAvec(marco);
 		akimoto.listerConnaissance();
 		akimoto.boire("thé");
-		
+
 		System.out.println(
 				"-----------------------------------------------------------------------------------------------------------");
-		
+
 		Traitre masako = new Traitre("Miyamoto", "Masako", "whisky", 100);
 		masako.faireLeGentil();
 		masako.ranconner(kumi);
@@ -42,7 +43,19 @@ public class HistoireTP5 {
 		masako.faireConnaissanceAvec(yaku);
 		masako.faireLeGentil();
 		masako.faireConnaissanceAvec(roro);
-		
+
+		System.out.println(
+				"-----------------------------------------------------------------------------------------------------------");
+
+		GrandMere grandMere = new GrandMere("Grand-Mère", 10);
+		grandMere.faireConnaissanceAvec(akimoto);
+		grandMere.faireConnaissanceAvec(yaku);
+		grandMere.faireConnaissanceAvec(masako);
+		grandMere.faireConnaissanceAvec(kumi);
+		grandMere.faireConnaissanceAvec(marco);
+		grandMere.faireConnaissanceAvec(chonin);
+		grandMere.ragoter();
+
 	}
 
 }

@@ -56,24 +56,24 @@ public class Humain {
 	}
 
 	public void faireConnaissanceAvec(Humain autreHumain) {
-		if (nbConnaissance == capaciteMemoire) {
-			for (int i = 0; i < nbConnaissance - 1; i++) {
-				memoire[i] = memoire[i + 1];
-			}
-			nbConnaissance--;
-		}
 		direBonjour();
 		autreHumain.repondre(this);
 		memoriser(autreHumain);
 	}
 
-	protected void repondre(Humain homme) {
+	private void repondre(Humain homme) {
 		direBonjour();
 		memoriser(homme);
 
 	}
 
 	protected void memoriser(Humain humain) {
+		if (nbConnaissance == capaciteMemoire) {
+			for (int i = 0; i < nbConnaissance - 1; i++) {
+				memoire[i] = memoire[i + 1];
+			}
+			nbConnaissance--;
+		}
 		memoire[nbConnaissance] = humain;
 		nbConnaissance++;
 
